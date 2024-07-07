@@ -9,7 +9,7 @@ module_options = {
 }
 
 
-//python script for detecting CSRF in software
+//python script for detecting CSRF in software low level security
 import requests
 
 # Config
