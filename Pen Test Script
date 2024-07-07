@@ -10,3 +10,51 @@ module_options = {
 
 
 //python script for detecting CSRF in software
+import requests
+
+# Configuration
+url_login = 'http://localhost/bWAPP/login.php'  # Update to your bWAPP login URL
+url_change_password = 'http://localhost/bWAPP/password_change.php'  # Update to your change password URL
+username = 'bee'  # Change to your username
+password = 'bug'  # Change to your password
+new_password = 'newpassword123'  # New password to set
+session = requests.Session()
+
+# Step 1: Log in to bWAPP
+login_data = {
+    'login': username,
+    'password': password,
+    'form': 'submit'
+}
+response = session.post(url_login, data=login_data)
+if 'Your Account' not in response.text:
+    print('Login failed.')
+    exit(1)
+
+# Step 2: Change password without CSRF token
+change_password_data = {
+    'password_current': password,
+    'password_new': new_password,
+    'password_conf': new_password,
+    'form': 'submit'
+}
+response = session.post(url_change_password, data=change_password_data)
+
+# Step 3: Check if password change was successful
+if 'Password successfully changed!' in response.text:
+    print('CSRF vulnerability detected! Password changed without CSRF token.')
+else:
+    print('Password change failed or CSRF protection is in place.')
+
+# Optional: Reset password back to original
+reset_password_data = {
+    'password_current': new_password,
+    'password_new': password,
+    'password_conf': password,
+    'form': 'submit'
+}
+response = session.post(url_change_password, data=reset_password_data)
+if 'Password successfully changed!' in response.text:
+    print('Password reset to original.')
+else:
+    print('Failed to reset password.')
