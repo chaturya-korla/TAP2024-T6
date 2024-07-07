@@ -7,3 +7,6 @@ module_options = {
     'USERNAME': 'admin',
     'PASSWORD': 'password'
 }
+
+
+//python script for detecting CSRF in software
