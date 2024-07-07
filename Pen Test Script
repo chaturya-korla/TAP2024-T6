@@ -12,7 +12,7 @@ module_options = {
 //python script for detecting CSRF in software
 import requests
 
-# Configuration
+# Config
 url_login = 'http://localhost/bWAPP/login.php'  # Update to your bWAPP login URL
 url_change_password = 'http://localhost/bWAPP/password_change.php'  # Update to your change password URL
 username = 'bee'  # Change to your username
