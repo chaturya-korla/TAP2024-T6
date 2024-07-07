@@ -1,0 +1,4 @@
+Vulnerabilities
+CSRF (Change password, Change secret, Transfer Amount) 
+PRIVILEGE ESCALATION
+RCE 
