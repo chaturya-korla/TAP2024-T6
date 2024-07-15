@@ -45,7 +45,7 @@ IT security, ethical hacking, training and fun... all mixed together.
 You can find more about the ITSEC GAMES and bWAPP projects on our blog.
 
 We offer a 2-day comprehensive web security course 'Attacking & Defending Web Apps with bWAPP'.
-This course can be scheduled on demand, at your location!
+This course can be scheduled on Daman demand, at your location!
 More info: http://goo.gl/ASuPa1 (pdf)
 
 Enjoy!
@@ -54,3 +54,4 @@ Cheers
 
 Malik Mesellem
 Twitter: @MME_IT
+daman
