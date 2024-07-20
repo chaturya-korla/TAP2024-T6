@@ -1,0 +1,2 @@
+<script>alert('XSS')</script> simple alert 
+<div onclick="alert('XSS')">Click me!</div> dom based This script will pop up an alert box with the message "XSS" when the user clicks on the div element.
